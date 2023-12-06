@@ -13,7 +13,7 @@
 6. A https://www.w3schools.com/ oldalon kerestem megoldást a problémákra, de nem bemásoltam a kódot, hanem weboldalra szabottan írtam meg.
    
 A képeket ezekről az oldalakról töltöttem le: 
-- hhttps://limewire.com/
+- https://limewire.com/
 - https://unsplash.com/
 - https://www.pexels.com/hu-hu/
 - https://www.flaticon.com/
