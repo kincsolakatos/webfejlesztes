@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<HTML lang = "hu">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "author" content = "Lakatos Kincső">
+		<meta name = "description" content = "Itt lehet leadni a rendeléseket.">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<title> Kincses Cukrászda </title>
+		<link href = "jscss/style.css" rel = "stylesheet">
+		<link rel = "icon" href = "kepek/logo.png" type="image/jpg" sizes="16x16">
+		<script src = "jscss/script.js"> </script>
+		<script src = "jscss/jquery-3.7.1.js"> </script>
+		<script src = "jscss/jquery.validate.js"> </script>
+		<script>
+			$(document).ready(function()
+			{
+				$("#rendeles").validate
+				({
+					rules: 
+					{
+						tipus: {required: true},
+						kg: {required: true, min: 1},
+						datum: {required: true},
+						nev: {required: true},
+						email: {required: true, email: true},
+						telefonszam: {required: true, number: true, minlength: 10},
+						adat: {required: true},
+					},
+					messages:
+					{
+						tipus: {required: "Válaszd ki, hogy milyen típusú süteményt szeretnél rendelni!"},
+						kg: {required: "Írd be, hogy hány kilogrammot szeretnél rendelni az előbb kiválasztott süteményből!", min: "A rendelés minimum értéke 1 kg."},
+						datum: {required: "Olyan dátumot válassz, amikor ténylegesen érte tudsz jönni!"},
+						nev: {required: "Add meg a vezetékneved ÉS a keresztneved!"},
+						email: {required: "Add meg az e-mail címed!", email: "Létező e-mail címet adj meg, amin el tudunk érni!"},
+						telefonszam: {required: "Add meg a telefonszámod!", number: "A telefonszám csak számokból állhat!", minlength: "A telefonszám minimum 10 karakterből kell álljon!"},
+						adat: {required: "Olvasd el az adatkezelési tájékoztatót!"},
+					},
+				});
+			});
+		</script>
+	</head>
+
+	<body onload = "ido()">
+		<nav id = "menu">
+			<a href = "index.html"> <img src = "kepek/logo.png" alt = "logo"> </a>
+
+			<input id = "gomb" type = "button" value = "≡" onClick = "menu()">
+
+			<ul id = "menu1">
+				<li> <a href = "index.html"> Főoldal </a> </li>
+				<li> <a href = "termekek.html"> Termékek </a> </li>
+				<li id = "aktiv"> <a href = "rendeles.html"> ↠ Rendelés ↞ </a> </li>
+				<li> <a href = "tanfolyam.html"> Tanfolyam </a> </li>
+			</ul>
+
+			<ul id = "menu2">
+				<li> <a href = "index.html"> Főoldal </a> </li>
+				<li> <a href = "termekek.html"> Termékek </a> </li>
+				<li id = "aktiv"> <a href = "rendeles.html"> ↠ Rendelés ↞ </a> </li>
+				<li> <a href = "tanfolyam.html"> Tanfolyam </a> </li>
+			</ul>
+		</nav>
+
+		<header id = "fejlec">
+			<img src = "kepek/logo.png" alt = "logo">
+			<h1> Kincses Cukrászda </h1>
+			<h4> “Amikor a szeretet nem győz le mindent, akkor a házi sütik következnek.” </h4>
+		</header>
+
+		<div id = "tartalom">
+			<div id = "info">
+				<aside>
+					<h3> Mondj el mindent a tortádról és mi megvalósítjuk! </h3>
+
+					<ul>
+						<li> Születésnapra vagy csak úgy, különösebb alkalom nélkül? Csak egy egészen kicsit vagy akár ötven főre? Klasszikusat vagy mesehős formatortát? Marcipánnal vagy anélkül? Csokoládésat vagy inkább gyümölcsöset? Felírattal vagy nélküle? </li>
+						<li> Bármilyennek is képzelted el a tortádat, töltsd ki az alábbi megrendelőlapot és mi a lehető legrövidebb időn belül felvesszük veled a kapcsolatot, hogy elképzeléseidnek maradéktalanul eleget tegyünk. </li>
+						<li> Nézd végig torta kínálatunkat és, ha netán egyiksem tetszik, álmodd meg a sajátodat és mi elkészítjük neked. </li>
+					</ul>
+				</aside>
+
+				<figure> <img id = "kep" src = "kepek/suti1.jpeg" alt = "sutemenyek"> </figure>
+			</div>
+
+			<form id = "rendeles" method = "post" action = "http://szamtud.uni-corvinus.hu/receive.php">
+				<fieldset>
+					<legend> Rendelés </legend>
+				
+					<label> Sütemény típusa: <input list = "lista" name = "tipus" id = "tipus"> </label>
+
+					<datalist id = "lista">
+						<option> Napfény </option>
+						<option> Csipkerózsa </option>
+						<option> Tenger hullámai </option>
+						<option> Malina </option>
+						<option> Égi csillagok </option>
+						<option> Tavaszi fűszálak </option>
+						<option> Epres álom </option>
+						<option> Vaníliás mágia </option>
+					</datalist>
+
+					<label> Kilogramm: <input type = "number" name = "kg" id = "kg" value = "5"> </label>
+
+					<label> Felirat: <input type = "text" name = "felirat" id = "felirat"> </label>
+					
+					<label> Elvitel időpontja: <input type = "date" name = "datum" id = "elvitel"> </label>
+					
+					<label> Név: <input type = "text" name = "nev" id = "nev"> </label>
+					
+					<label> E-mail: <input type = "email" name = "email" id = "email" > </label>
+					
+					<label> Telefonszám: <input type = "tel" name = "telefonszam" id = "telefonszam"> </label>
+					
+					<label> Megjegyzés: <textarea name = "megjegyzes" id = "megjegyzes" rows = "4" > extra hab </textarea> </label>
+					
+					<label id = "jelolo"> <input type = "checkbox" name = "adat"> <a href = "adat.html"> Elolvastam és elfogadom az adatvédelmi nyilatkozatot. Hozzájárulok személyes adataim gyűjtéséhez és kezeléséhez a rendelés folyamatában. </a> </label>
+
+					<input type = "submit" name = "kuldes" id = "kuldes" value = "Rendelés" onclick = "rend()" onmouseover = "shake()">
+				</fieldset>
+			</form>
+		</div>
+
+		<footer>
+			<nav id = "social">
+				<ul>
+					<li> <a href = "https://www.facebook.com/" target = "_blank"> <img src = "kepek/face.png"> </a> </li>
+					<li> <a href = "https://www.instagram.com/" target = "_blank"> <img src = "kepek/insta.png"> </a> </li>
+					<li> <a href = "https://www.pinterest.com/" target = "_blank"> <img src = "kepek/pint.png"> </a> </li>
+					<li> <a href = "https://www.twitter.com/" target = "_blank"> <img src = "kepek/twit.png"> </a> </li>
+					<li> <a href = "https://www.whatsapp.com/" target = "_blank"> <img src = "kepek/what.png"> </a> </li>
+					<li> <a href = "https://www.youtube.com/" target = "_blank"> <img src = "kepek/yout.png"> </a> </li>
+				</ul>
+			</nav>
+
+			<ul>
+				<li> Budapesti Corvius Egyetem, gazdsaáginformatika szakos hallgató weblapfejlesztési beadandója </li>
+				<li> Ez a weboldal tanulmányi célokat szolgál! A benne levő tartalom kitaláció. </li>
+				<li> <a href = "adat.html"> Lakatos Kincső © 2023 </a> </li>
+			</ul>
+
+			<p> <img src = "kepek/party.gif" alt = "olvadt"> </p>
+		</footer>
+	</body>
+</HTML>

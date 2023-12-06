@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<HTML lang = "hu">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "author" content = "Lakatos Kincső">
+		<meta name = "description" content = "A Kincses Cukrászdában fogyasztható és rendelhető termékek.">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<title> Kincses Cukrászda </title>
+		<link rel = "icon" href = "kepek/logo.png" type="image/jpg" sizes="16x16">
+		<script src = "jscss/script.js"> </script>
+		<script src = "jscss/jquery-3.7.1.js"> </script>
+		<script src = "jscss/galleria.js"> </script>
+		<script src = "jscss/galleria.classic.js"> </script>
+		<script>
+			$(document).ready(function() 
+			{
+				$(`#tortak`).galleria(
+					width = 480,
+					height = 680
+				);
+			});
+			$(document).ready(function() 
+			{
+				$(`#sutik`).galleria(
+					width = 480,
+					height = 680
+				);
+			});
+		</script>
+		<link href = "jscss/style.css" rel = "stylesheet">
+		<style>
+			.galleria 
+			{
+				margin: auto;
+				background-color: #ffe0c0;
+				width: 90vw;
+				height: 140vw;
+			}
+			@media all and (min-width: 480px)
+			{
+				.galleria
+				{
+					height: 120vw;
+				}
+			}
+			@media all and (min-width: 960px)
+			{
+				.galleria
+				{
+					width: 45vw;
+					height: 65vw;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav id = "menu">
+			<a href = "index.html"> <img src = "kepek/logo.png" alt = "logo"> </a>
+			
+			<input id = "gomb" type = "button" value = "≡" onClick = "menu()">
+
+			<ul id = "menu1">
+				<li> <a href = "index.html"> Főoldal </a> </li>
+				<li id = "aktiv"> <a href = "termekek.html"> ↠ Termékek ↞ </a> </li>
+				<li> <a href = "rendeles.html"> Rendelés </a> </li>
+				<li> <a href = "tanfolyam.html"> Tanfolyam </a> </li>
+			</ul>
+
+			<ul id = "menu2">
+				<li> <a href = "index.html"> Főoldal </a> </li>
+				<li id = "aktiv"> <a href = "termekek.html"> ↠ Termékek ↞ </a> </li>
+				<li> <a href = "rendeles.html"> Rendelés </a> </li>
+				<li> <a href = "tanfolyam.html"> Tanfolyam </a> </li>
+			</ul>
+		</nav>
+
+		<header>
+			<img src = "kepek/logo.png" alt = "logo">
+			<h1> Kincses Cukrászda </h1>
+			<h4> “Amikor a szeretet nem győz le mindent, akkor a házi sütik következnek.” </h4>
+		</header>
+
+		<div id = "galeriar">
+			<article id = "termekek">
+				<h2> Torták </h2>
+				
+				<div id = "tortak" class = "galleria">
+					<img src = "kepek/termekek/torta1.jpeg" alt = "10 000 ft/kg" title = "Napfény">
+					<img src = "kepek/termekek/torta2.jpeg" alt = "11 000 ft/kg" title = "Csipkerózsa">
+					<img src = "kepek/termekek/torta3.jpeg" alt = "12 000 ft/kg" title = "Tenger hullámai">
+					<img src = "kepek/termekek/torta4.jpeg" alt = "13 000 ft/kg" title = "Malina">
+				</div>
+			</article>
+					
+			<article id = "termekek">
+				<h2> Sütemények </h2>
+
+				<div id = "sutik" class = "galleria">
+					<img src = "kepek/termekek/sutemeny1.jpeg" alt = "5 000 ft/kg" title = "Égi csillagok">
+					<img src = "kepek/termekek/sutemeny2.jpeg" alt = "6 000 ft/kg" title = "Tavaszi fűszálak">
+					<img src = "kepek/termekek/sutemeny3.jpeg" alt = "7 000 ft/kg" title = "Epres álom">
+					<img src = "kepek/termekek/sutemeny4.jpeg" alt = "8 000 ft/kg" title = "Vaníliás mágia">
+				</div>
+			</article>
+		</div>
+
+		<footer>
+			<nav id = "social">
+				<ul>
+					<li> <a href = "https://www.facebook.com/" target = "_blank"> <img src = "kepek/face.png"> </a> </li>
+					<li> <a href = "https://www.instagram.com/" target = "_blank"> <img src = "kepek/insta.png"> </a> </li>
+					<li> <a href = "https://www.pinterest.com/" target = "_blank"> <img src = "kepek/pint.png"> </a> </li>
+					<li> <a href = "https://www.twitter.com/" target = "_blank"> <img src = "kepek/twit.png"> </a> </li>
+					<li> <a href = "https://www.whatsapp.com/" target = "_blank"> <img src = "kepek/what.png"> </a> </li>
+					<li> <a href = "https://www.youtube.com/" target = "_blank"> <img src = "kepek/yout.png"> </a> </li>
+				</ul>
+			</nav>
+
+			<ul>
+				<li> Budapesti Corvius Egyetem, gazdsaáginformatika szakos hallgató weblapfejlesztési beadandója </li>
+				<li> Ez a weboldal tanulmányi célokat szolgál! A benne levő tartalom kitaláció. </li>
+				<li> <a href = "adat.html"> Lakatos Kincső © 2023 </a> </li>
+			</ul>
+
+			<p> <img src = "kepek/party.gif" alt = "olvadt"> </p>
+		</footer>
+	</body>
+</HTML>

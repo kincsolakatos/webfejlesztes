@@ -1,0 +1,809 @@
+*
+{
+    margin: 0%;
+	padding: 0%;
+    box-sizing: border-box;
+    font-family: "playfair-display", baskerville, serif;
+    color: #404040;
+    font-size: 1em;
+}
+body
+{
+    background-image: linear-gradient(to bottom right, #ffc0c0, #fff, #c0e0ff);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+nav
+{
+    flex: 1 1 100%;
+    width: 100%;
+    background-color: #ffc0c0;
+    overflow: hidden;
+    text-align: center;
+}
+#menu
+{
+    position: fixed;
+    top: 0; 
+    z-index: 8;
+}
+nav a
+{
+    text-decoration: none;
+}
+nav img
+{
+    width: 15%;
+    margin: 0 4%;
+}
+#menu img
+{
+    overflow: hidden;
+    position: fixed;
+    top: 0; 
+    z-index: 9;
+    left: 0;
+}
+nav input
+{
+    text-align: center;
+    font-size: 2em;
+    background-color: #ffc0c0;
+    padding: 1%;
+    border: #ffc0c0 solid 1px;
+    color: #404040
+}
+nav ul
+{
+    list-style-type: none;
+    display: none;
+    align-items: stretch;
+    width: 100%;
+}
+#menu ul
+{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+nav li
+{
+    text-align: center;
+    padding: 1% 3%;
+    text-align: center;
+}
+nav li:hover
+{
+    background-color: #ffe0e0;
+}
+
+#aktiv
+{
+    background-color: #fff0f0;
+}
+header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-image: url("kepek/cim.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+header img
+{
+    width: 20%;
+    margin: 1% 3%;
+    margin-top: 100%;
+    animation: logo 4s;
+}
+h1 
+{
+    flex: 1 1 100%;
+    font-family: "raleway", arial, sans-serif;
+    font-size: 3.5em;
+    text-align: center;
+    margin: 1% 3%;
+    letter-spacing: 1px;
+
+}
+h4
+{
+    flex: 1 1 100%;
+    font-family: "raleway", arial, sans-serif;
+    text-align: center;
+    margin: 1% 3%;
+    font-size: 1.25em;
+}
+#tartalom 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    background-image: url("kepek/tartalom.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: max-content;
+}
+#info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+aside
+{
+    width: 100%;
+}
+h3
+{
+    font-family: "raleway", arial, sans-serif;
+    font-size: 1.75em;
+    text-align: center;  
+    padding: 1% 3%;
+    background-color: #ffc0e0;
+    margin: 1% 3%;
+    border: 2px solid #ff80c0;
+}
+aside ul, ol
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+aside ul
+{
+    list-style-type: none;
+}
+aside ol
+{
+    margin-left: 8%;
+}
+aside li
+{
+    text-align: center;
+    padding: 1% 3%;
+    background-color: #fff;
+    border: 2px solid #ffc0e0;
+    margin: 1% 3%;
+}
+figure
+{
+    text-align: center;
+}
+figure img
+{
+    width: 94%;
+    margin: 1% 3%;
+    border: 4px solid #fff;
+}
+#galeriar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: stretch;
+    background-image: url("kepek/tartalom.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+article
+{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-around;
+    width: 100%;
+}
+h2, 
+legend
+{
+    font-family: "raleway", arial, sans-serif;
+    font-size: 2.5em;
+    text-align: center;  
+    padding: 1% 3%;
+    background-color: #ffe0c0;
+    margin: 1% 3%;
+    border: 2px solid #ffc080;
+}
+article p
+{
+    flex: 1 1 100%;
+    text-align: justify;
+    text-indent: 4%;
+    padding: 1% 3%;
+    background-color: #fff;
+    margin: 1% 3%;
+    border: 2px solid #ffe0c0;
+}
+article img
+{
+    width: 100%;
+}
+article ul
+{
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 1% 3%;
+    background-color: #fff;
+    margin: 1% 3%;
+    border: 2px solid #ffe0c0;
+}
+article li
+{
+    text-align: center;
+}
+#tartalom h2, 
+#tartalom legend
+{
+    flex: 1 1 94%;
+}
+#termekek
+{
+    flex: 1 1 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: stretch;
+}
+#termekek h2
+{
+    width: 94%;
+}
+#tortak, #sutik
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: stretch;
+}
+#nyilatkozat
+{
+    background-image: url("kepek/tartalom.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#nyilatkozat h4
+{
+    background-color: #ffe0c0;
+    border: 2px solid #ffc080;
+    padding: 1% 3%;
+}
+#nyilatkozat p
+{
+    text-indent: 0;
+    text-align: center;
+}
+form
+{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+form fieldset
+{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    border: 2px solid #ffe0c0;
+    margin: 1% 3%;
+    padding: 1% 3%;
+}
+form legend 
+{
+    margin: 1% 0;
+}
+form label
+{
+    flex: 1 1 94%;
+    text-align: center;
+    padding: 1% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 94%;
+    margin: 1% 3%;
+}
+form label.error
+{
+    color: #ff8000
+}
+form input, 
+textarea, 
+select
+{
+    width: 96%;
+    padding: 1% 3%;
+    border: 2px solid #fff0e0;
+    background-color: #fff0e0;
+    text-align: center;
+    margin: 1% 3%;
+}
+form input:hover, 
+textarea:hover, 
+select:hover
+{
+    border: 2px solid #ffc080;
+}
+form input[type = submit]
+{
+    width: 40%;
+    border: 2px solid #ffc080;
+    margin-left: 30%;
+    cursor: pointer;
+}
+form input[type = submit]:hover
+{
+    background-color: #ffc080;
+}
+#jelolo 
+{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#jelolo input
+{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+}
+#datumok
+{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#radiok
+{
+    flex: 1 1 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#radiok label
+{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 100%;
+}
+#radiok input
+{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+}
+footer
+{
+    background-color: #ffc0c0;
+    text-align: center;
+    position: sticky;
+    z-index: -1;
+    bottom: 0;
+}
+footer ul
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+}
+footer li
+{
+    text-align: center;
+    font-size: 0.8em;
+    color: #646464;
+    padding: 1%;
+}
+footer p img
+{
+    width: 10%;
+    margin-bottom: 1% 3%;
+}
+footer p
+{
+    font-size: 0.8em;
+    padding: 1%;
+    color: #646464;
+}
+#social ul
+{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#social li
+{
+    width: 16%;
+}
+#social a
+{
+    width: 15%;
+    height: 15%;
+}
+#social img
+{
+    width: 15%;
+}
+#social img:hover
+{
+    width: 16%;
+}
+@font-face
+{
+    font-family: "playfair-display";
+    src: url("betukeszletek/playfair-display/PlayfairDisplay-Regular.ttf");
+}
+@font-face
+{
+    font-family: "raleway";
+    src: url("betukeszletek/raleway/Raleway-Regular.ttf");
+}
+@keyframes logo 
+{
+    0%
+    {
+        width: 20%;
+    }
+    25%
+    {
+        width: 22%;
+    }
+    50%
+    {
+        width: 20%;
+    }
+    75%
+    {
+        width: 22%;
+    }
+    100%
+    {
+        width: 20%;
+    }
+}
+@keyframes shake
+{
+    0%
+    {
+        padding: 1% 3%;
+    }
+    50%
+    {
+        padding: 0 2%;
+    }
+    100%
+    {
+        padding: 1% 3%;
+    }
+}
+@media all and (min-width: 320px)
+{
+    nav img 
+    {
+        width: 10%;
+    }
+    header img 
+    {
+        margin-top: 91%;
+    }
+    header h4 
+    {
+        margin-bottom: 81%;
+    }
+    footer p img 
+    {
+        width: 9%;
+    }
+}
+@media all and (min-width: 480px)
+{
+    #menu ul 
+    {
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav img 
+    {
+        width: 8%;
+    }
+    header img 
+    {
+        margin-top: 56%;
+    }
+    h1 
+    {
+        font-size: 4.5em;
+    }
+    header h4
+    {
+        font-size: 1.5em;
+        margin-bottom: 47%;
+    }
+    #info 
+    {
+        flex-direction: row;
+        height: max-content;
+    }
+    aside
+    {
+        width: 50%;
+    }
+    h3
+    {
+        font-size: 2.25em;
+    }
+    figure
+    {
+        width: 50%;
+    }
+    h2
+    {
+        font-size: 3.25em;
+    }
+    #ordered
+    {
+        width: 100%;
+    }
+    #termekek figure 
+    {
+        width: 46%;
+    }
+    footer li
+    {
+        font-size: 0.9em;
+    }
+    footer p img 
+    {
+        width: 8%;
+    }
+}
+@media all and (min-width: 640px)
+{
+    nav img 
+    {
+        width: 7%;
+    }
+    header img 
+    {
+        margin-top: 40%;
+    }
+    header h4
+    {
+        margin-bottom: 32%;
+    }
+    footer p img 
+    {
+        width: 7%;
+    }
+}
+@media all and (min-width: 800px)
+{
+    nav img 
+    {
+        width: 6%;
+    }
+    header img 
+    {
+        margin-top: 35%;
+    }
+    header h4
+    {
+        margin-bottom: 28%;
+    }
+    footer p img 
+    {
+        width: 6%;
+    }
+}
+@media all and (min-width: 960px)
+{
+    body 
+    {
+        background-image: linear-gradient(to bottom right, #ffc0c0, #fff, #ffe0c0, #fff, #c0e0ff);
+    }
+    nav img 
+    {
+        width: 7%;
+    }
+    nav input 
+    {
+        display: none;
+    }
+    #menu1 
+    {
+        display: none;
+    }
+    #menu2
+    {
+        display: flex;
+    }
+    nav img 
+    {
+        width: 3%;
+    }
+    nav li 
+    {
+        padding: 1% 2%;
+    }
+    header img 
+    {
+        margin-top: 24%;
+    }
+    h1 
+    {
+        font-size: 5.5em;
+    }
+    header h4
+    {
+        font-size: 1.75em;
+        margin-bottom: 18%;
+    }
+    header h4 
+    {
+        margin-bottom: 22%;
+    }
+    #galeriar
+    {
+        flex-direction: row;
+    }
+    #tartalom 
+    {
+        flex-direction: row;
+        height: max-content;
+    }
+    #info 
+    {
+        width: 34%;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+    aside
+    {
+        width: 100%;
+    }
+    h3
+    {
+        font-size: 2.75em;
+    }
+    figure
+    {
+        width: 100%;
+        margin-top: auto;
+    }
+    #tartalom article, form
+    {
+        flex: 1 1 66%;
+        width: 66%;
+    }
+    h2
+    {
+        font-size: 4em;
+    }
+    article p 
+    {
+        font-size: 1.1em;
+    }
+    #termekek figure 
+    {
+        width: 21%;
+    }
+    footer li 
+    {
+        font-size: 1em;
+    }
+    footer p img 
+    {
+        padding: 0;
+        width: 5%;
+    }
+}
+@media all and (min-width: 1120px)
+{
+    header img 
+    {
+        margin-top: 22%;
+    }
+    header h4 
+    {
+        margin-bottom: 17%;
+    }
+}
+@media all and (min-width: 1280px)
+{
+    header img 
+    {
+        margin-top: 18%;
+    }
+    header h4 
+    {
+        margin-bottom: 14%;
+    }
+    footer p img 
+    {
+        width: 4%;
+    }
+}
+@media all and (min-width: 1440px)
+{
+    header img 
+    {
+        margin-top: 15%;
+    }
+    header h4 
+    {
+        margin-bottom: 12%;
+    }
+}
+@media all and (min-width: 1600px)
+{
+    header img 
+    {
+        margin-top: 14%;
+    }
+    header h4 
+    {
+        margin-bottom: 12%;
+    }
+    footer p img 
+    {
+        width: 3%;
+    }
+}
+@media all and (min-width: 1760px)
+{
+    header img 
+    {
+        margin-top: 11%;
+    }
+    header h4
+    {
+        margin-bottom: 10%;
+    }
+}
